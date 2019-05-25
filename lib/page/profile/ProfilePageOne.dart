@@ -33,6 +33,7 @@ class _ProfileState extends State<ProfilePageOne> {
     Widget _itemPhoto(String img) {
       return Container(
         margin: EdgeInsets.only(
+          ///左边距
           left: SizeUtil.getAxisX(10.0),
           right: SizeUtil.getAxisX(10.0),
         ),

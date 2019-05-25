@@ -22,6 +22,7 @@ class HomePage extends StatelessWidget {
         pinned: true,
         backgroundColor: BLUE,
         expandedHeight: 150.0,
+        ///
         flexibleSpace: FlexibleSpaceBar(
           title: Padding(
             padding: EdgeInsets.only(top: 30.0),
@@ -42,11 +43,12 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          ///设置背景色
           background: Container(
             decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
                 YELLOW,
-                BLUE,
+                Colors.red,
               ]),
             ),
           ),
@@ -58,6 +60,7 @@ class HomePage extends StatelessWidget {
     return InkWell(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
+        ///分割线
         margin: EdgeInsets.only(bottom: 1.0),
         decoration: BoxDecoration(gradient: GradientUtil.greenPurple()),
         constraints: BoxConstraints.expand(height: 60.0),
@@ -103,6 +106,7 @@ class HomePage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: GradientUtil.yellowGreen(),
         ),
+        ///设置高度
         constraints: BoxConstraints.expand(height: 80.0),
         child: Center(
           child: Row(
@@ -127,11 +131,14 @@ class HomePage extends StatelessWidget {
   }
 
   void _clickMenu(context, Menu menu) {
+    ///modal
     showModalBottomSheet(
       context: context,
+      ///Material
       builder: (context) => Material(
             color: GREEN,
             clipBehavior: Clip.antiAliasWithSaveLayer,
+            ///圆角
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
@@ -200,6 +207,7 @@ class HomePage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             Container(
+              ///占满
               constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(gradient: _itemGradient(index)),
             ),
@@ -247,16 +255,19 @@ class HomePage extends StatelessWidget {
 
   Widget _streamBuild(context) {
     var controller = MenuController();
+    ///streamBuilder
     return StreamBuilder(
       builder: (context, shot) {
         return shot.hasData
             ? CustomScrollView(
+          //shot.data
                 slivers: <Widget>[_topBar(), _gridView(context, shot.data)],
               )
             : Center(
                 child: CircularProgressIndicator(),
               );
       },
+      ///获取数据
       stream: controller.menuItems,
     );
   }
@@ -273,6 +284,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ///设置size
     SizeUtil.size = MediaQuery.of(context).size;
     return _showAndroid(context);
   }

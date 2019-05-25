@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    ///修改状态栏颜色
     SystemChrome.setEnabledSystemUIOverlays([]);
     return MaterialApp(
       title: StringConst.APP_NAME,
@@ -23,12 +24,14 @@ class MyApp extends StatelessWidget {
         accentColor: YELLOW,
         fontFamily: "Montserrat",
       ),
+      ///主页
       home: HomePage(),
       routes: {
         //PROFILE pages
         PROFILE_PAGES[0]: (context) => ProfilePageOne(),
         PROFILE_PAGES[1]: (context) => ProfilePageTwo(),
 
+        ///登录页
         SIGN_UP_PAGES[0]: (context) => SignPageOne(),
         SIGN_UP_PAGES[1]: (context) => SignPageTwo(),
         SIGN_UP_PAGES[2]: (context) => SignPageThree(),

@@ -4,6 +4,7 @@
 /// Email: niebin312@gmail.com
 ///
 ///
+///登录页面
 const SIGN_UP_PAGES = [
   "Sign up page 01",
   "Sign up page 02",

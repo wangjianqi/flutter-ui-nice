@@ -9,6 +9,7 @@ import 'package:flutter_ui_nice/item/Menu.dart';
 import 'package:flutter_ui_nice/const/images_const.dart';
 import 'package:flutter_ui_nice/const/page_str_const.dart';
 
+///不同页面
 const _MENU_STRINGS = [
   {'title': "Sign Up", 'items': SIGN_UP_PAGES},
   {'title': "Walk Through", 'items': WALK_THROUGH_PAGES},
@@ -64,6 +65,7 @@ class MenuController {
   Stream<List<Menu>> get menuItems => controller.stream;
 
   MenuController({List<Menu> menus}) {
+    ///添加默认的
     controller.add(menus ?? _defaultMenus());
   }
 

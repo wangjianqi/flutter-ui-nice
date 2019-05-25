@@ -28,6 +28,7 @@ class SignPageOne extends StatelessWidget {
             headlinesWidget(),
             emailTextFieldWidget(),
             passwordTextFieldWidget(),
+            ///登录按钮
             loginButtonWidget(),
             signupWidget()
           ],
@@ -54,8 +55,10 @@ Widget signupWidget() {
             'Sign Up',
             style: TextStyle(
                 color: Color(0xff353535),
+                ///下划线
                 decoration: TextDecoration.underline,
                 fontWeight: FontWeight.bold,
+                ///字体
                 fontFamily: 'Montserrat'),
           ),
         )
@@ -108,11 +111,14 @@ Widget emailTextFieldWidget() {
               Color(0xffFFAFBD),
             ])),
     child: TextField(
+      ///字体样式
       style: hintAndValueStyle,
       decoration: new InputDecoration(
           suffixIcon: Icon(IconData(0xe902, fontFamily: 'Icons'),
               color: Color(0xff35AA90), size: 10.0),
+          ///内容边距
           contentPadding: new EdgeInsets.fromLTRB(40.0, 30.0, 10.0, 10.0),
+          ///无边框
           border: OutlineInputBorder(
               borderRadius: new BorderRadius.circular(12.0),
               borderSide: BorderSide.none),
@@ -132,8 +138,10 @@ Widget headlinesWidget() {
           'WELCOME BACK!',
           textAlign: TextAlign.left,
           style: TextStyle(
+            ///字母间距
               letterSpacing: 3,
               fontSize: 20.0,
+              ///字体
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.bold),
         ),

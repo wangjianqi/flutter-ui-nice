@@ -20,6 +20,7 @@ class ImagePath {
   static const String nbImage = "$imageDir/nb.jpeg";
 }
 
+///图片路径
 class MainImagePath {
   static const String image_path = "assets/images/main";
   static const String image_app = "assets/images/media/ic_launcher.png";

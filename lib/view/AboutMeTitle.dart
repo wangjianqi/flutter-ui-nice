@@ -9,6 +9,7 @@ import 'package:flutter_ui_nice/const/color_const.dart';
 import 'package:flutter_ui_nice/const/images_const.dart';
 
 class AboutMeTitle extends AboutListTile {
+  ///继承
   AboutMeTitle()
       : super(
             icon: Image.asset(
