@@ -55,6 +55,7 @@ class _Coordinator extends State<NavigationOneCoordinator> with TickerProviderSt
 						),
 					),
 
+					///动画
 					AnimatedBuilder(
 							animation: _controller,
 							builder: (context, widget) => Transform(

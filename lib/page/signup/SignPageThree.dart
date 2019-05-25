@@ -22,6 +22,7 @@ class _SignPageThreeState extends State<SignPageThree> {
   Widget build(BuildContext context) {
     final _media = MediaQuery.of(context).size;
     return Scaffold(
+      ///设置背景
       body: Container(
         height: double.infinity,
         width: double.infinity,
@@ -91,6 +92,7 @@ class _SignPageThreeState extends State<SignPageThree> {
                                   SizedBox(
                                     height: 40,
                                   ),
+                                  ///输入框
                                   Container(
                                       margin: EdgeInsets.only(bottom: 16.0),
                                       child: inputText(
@@ -101,6 +103,7 @@ class _SignPageThreeState extends State<SignPageThree> {
                             ),
                           ),
                           Flexible(
+                            ///设置透明度
                             child: Opacity(
                               opacity: 0.6,
                               child: new Container(

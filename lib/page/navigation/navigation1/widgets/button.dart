@@ -20,6 +20,7 @@ class Button {
 				child: Stack(
 					children: <Widget>[
 						_button(onPressed, title, icon),
+						///通知
 						Positioned(
 							top: 0.0,
 						  right: 0.0,
@@ -44,6 +45,7 @@ class Button {
 
 	static Widget _button(VoidCallback onPressed, String title, IconData icon) => RaisedButton(
 		color: GREEN,
+		///shape
 		shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
 		onPressed: onPressed,
 		child: Padding(

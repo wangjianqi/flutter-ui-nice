@@ -10,15 +10,19 @@ class DatePicker extends StatefulWidget {
 class _DatePickerState extends State<DatePicker> {
   DateTime date = DateTime.now();
 
+  ///选择日期
   Future _selectDate(BuildContext context) async {
     DateTime picker = await showDatePicker(
         context: context,
         initialDate: date,
+        ///开始时间
         firstDate: new DateTime(1900),
+        ///最后时间
         lastDate: new DateTime.now());
 
     if (picker != null) {
       setState(() {
+        ///获取时间
         date = picker;
       });
     }
@@ -42,6 +46,7 @@ class _DatePickerState extends State<DatePicker> {
               style: TextStyle(letterSpacing: 2.0, fontFamily: 'Montserrat'),
             ),
             Text(
+              ///日期格式
               new DateFormat('d MMM y').format(date),
               style: TextStyle(
                   letterSpacing: 2.0,

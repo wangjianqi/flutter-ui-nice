@@ -8,6 +8,7 @@ class BackgroundCommon extends StatelessWidget {
 
 	@override
   Widget build(BuildContext context) => Container(
+		///设置背景色
       decoration: BoxDecoration(
 					gradient: LinearGradient(
 						begin: Alignment.topLeft,

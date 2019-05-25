@@ -243,6 +243,7 @@ class _SignPageSixState extends State<SignPageSix>
     ];
 
     return Scaffold(
+      ///
       resizeToAvoidBottomPadding: false,
       body: Stack(
         overflow: Overflow.visible,
@@ -412,6 +413,7 @@ class _SignPageSixState extends State<SignPageSix>
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
+        ///装饰图片
         image: DecorationImage(
           image: AssetImage(SignUpImagePath.SignUpPage_6_Bg),
           fit: BoxFit.contain,

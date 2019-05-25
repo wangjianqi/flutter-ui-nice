@@ -207,6 +207,7 @@ class _FeedState extends State<FeedPageOne> {
                     horizontal: 30.0, vertical: 10.0),
                 child: Stack(
                   children: <Widget>[
+                    ///底部的边框
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20.0, vertical: 10.0),

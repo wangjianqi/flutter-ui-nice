@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       ///主页
       home: HomePage(),
       routes: {
-        //PROFILE pages
+        ///profile
         PROFILE_PAGES[0]: (context) => ProfilePageOne(),
         PROFILE_PAGES[1]: (context) => ProfilePageTwo(),
 
@@ -55,12 +55,14 @@ class MyApp extends StatelessWidget {
         FEED_PAGES[11]: (context) => FeedPageTwelve(),
         FEED_PAGES[12]: (context) => FeedPageThirteen(),
 
+        ///shopping 页面
         SHOPPING_PAGES[17]: (context) => ShopPageEighteen(),
         SHOPPING_PAGES[18]: (context) => ShopPageNineteen(),
 
         NAVIGATION_PAGES[0]: (context) => NavigationOneCoordinator(),
         //FIXME there are other pages to jump with 'page_str_const.dart',there should be make by manager
       },
+      ///未实现的路由
       onUnknownRoute: (setting) =>
           MaterialPageRoute(builder: (context) => EmptyPage()),
     );

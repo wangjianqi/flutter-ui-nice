@@ -3,6 +3,7 @@ import 'package:flutter_ui_nice/const/color_const.dart';
 import 'package:flutter_ui_nice/const/icons.dart';
 import 'package:flutter_ui_nice/page/signup/widgets/signup_arrow_button.dart';
 
+///实现PreferredSizeWidget
 class SignupApbar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
   SignupApbar({this.title});
@@ -11,6 +12,7 @@ class SignupApbar extends StatelessWidget implements PreferredSizeWidget {
     final double statusbarHeight = MediaQuery.of(context).padding.top;
 
     return Container(
+      ///顶部padding
       padding: EdgeInsets.only(top: statusbarHeight),
       decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -21,6 +23,7 @@ class SignupApbar extends StatelessWidget implements PreferredSizeWidget {
       child: NavigationToolbar(
         leading: Align(
           alignment: Alignment(-0.5, 4),
+          ///
           child: SignUpArrowButton(
             onTap: () => Navigator.maybePop(context),
             icon: IconData(

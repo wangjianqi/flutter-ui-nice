@@ -10,6 +10,7 @@ class SignPageTeen extends StatefulWidget {
 
 class _SignPageTeenState extends State<SignPageTeen>
     with TickerProviderStateMixin {
+  ///当前索引
   int widgetIndex = 0;
   PageController _pageController;
 
@@ -22,6 +23,7 @@ class _SignPageTeenState extends State<SignPageTeen>
 
     _pageController.addListener(() {
       setState(() {
+        ///当前页面索引
         widgetIndex = _pageController.page.ceil();
       });
     });
@@ -139,7 +141,9 @@ class _SignPageTeenState extends State<SignPageTeen>
                   SizedBox(
                     height: 40,
                   ),
+                  ///next按钮
                   buildNextButton(),
+                  ///
                   InkWell(
                     onTap: () => print("Term tapped"),
                     child: Text(
@@ -283,6 +287,7 @@ class SelectedWidget extends StatelessWidget {
     ));
   }
 
+  ///指示widget
   Widget _activeWidget() {
     return Container(
       child: Padding(

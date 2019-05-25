@@ -221,6 +221,7 @@ class _ShopEighteenState extends State<ShopPageEighteen> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30.0),
                           color: Colors.black),
+                      ///设置radio主题
                       child: Theme(
                         data: ThemeData(disabledColor: Colors.lightBlue[100]),
                         child: Radio(

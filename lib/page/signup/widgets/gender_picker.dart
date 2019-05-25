@@ -54,6 +54,7 @@ class _GenderPickerState extends State<GenderPicker> {
                 padding: const EdgeInsets.only(right: 16.0),
                 child: InkWell(
                   onTap: () => _selectGender(false),
+                  ///修改透明度
                   child: Opacity(
                     opacity: _isFemale ? 0.5 : 1,
                     child: Text(

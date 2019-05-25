@@ -16,8 +16,10 @@ class ProfileImagePicker extends StatefulWidget {
 class _ProfileImagePickerState extends State<ProfileImagePicker> {
   File _image;
 
+  ///获取图片
   Future getImage() async {
     try {
+      ///拍照
       File image = await ImagePicker.pickImage(source: ImageSource.camera);
 
       setState(() {
@@ -48,6 +50,7 @@ class _ProfileImagePickerState extends State<ProfileImagePicker> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(16.0),
               child: _image != null
+              ///加载图片
                   ? Image.file(
                       _image,
                       fit: BoxFit.contain,

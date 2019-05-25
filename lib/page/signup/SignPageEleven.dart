@@ -50,6 +50,7 @@ class _SignPageElevenState extends State<SignPageEleven> {
         physics: BouncingScrollPhysics(),
         child: Stack(
           children: <Widget>[
+            ///背景图
             Container(
               height: _media.height,
               width: _media.width,
@@ -338,6 +339,7 @@ class _SignPageElevenState extends State<SignPageEleven> {
             ),
             Expanded(
               flex: 2,
+              ///添加wrap
               child: Wrap(
                 children: <Widget>[
                   FlatButton(

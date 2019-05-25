@@ -73,6 +73,7 @@ class _SignPageFiveState extends State<SignPageFive> {
                                   InkWell(
                                     onTap: () {
                                       _selectType(false);
+                                      ///前一页
                                       _pageController.previousPage(
                                         duration: Duration(milliseconds: 300),
                                         curve: Curves.easeInOut,
@@ -94,6 +95,7 @@ class _SignPageFiveState extends State<SignPageFive> {
                                   ),
                                   InkWell(
                                     onTap: () {
+                                      ///下一页
                                       _pageController.nextPage(
                                         duration: Duration(milliseconds: 300),
                                         curve: Curves.easeOut,
@@ -145,6 +147,7 @@ class _SignPageFiveState extends State<SignPageFive> {
                                                 ),
                                               ),
                                             ),
+                                            ///pageView
                                             child: PageView.builder(
                                               controller: _pageController,
                                               itemBuilder: (context, index) {

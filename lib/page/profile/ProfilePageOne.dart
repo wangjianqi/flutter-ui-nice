@@ -116,6 +116,7 @@ class _ProfileState extends State<ProfilePageOne> {
     Widget _bottomBar() {
       return Container(
         constraints:
+            ///高度
             BoxConstraints.expand(height: SizeUtil.getAxisY(BOTTOM_BAR_HEIGHT)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -279,6 +280,7 @@ class _ProfileState extends State<ProfilePageOne> {
                               'Frankfurt am main',
                               style: TextStyle(
                                 color: TEXT_BLACK,
+                                ///设置字体
                                 fontSize: SizeUtil.getAxisBoth(TEXT_SIZE_M),
                                 fontWeight: FontWeight.w300,
                               ),
