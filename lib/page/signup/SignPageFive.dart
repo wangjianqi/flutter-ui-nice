@@ -16,6 +16,7 @@ class _SignPageFiveState extends State<SignPageFive> {
   PageController _pageController;
   bool _isSelected = false;
 
+  ///选中
   _selectType(bool isSelected) {
     setState(() {
       _isSelected = isSelected;

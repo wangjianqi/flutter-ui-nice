@@ -114,6 +114,7 @@ Widget emailTextFieldWidget() {
       ///字体样式
       style: hintAndValueStyle,
       decoration: new InputDecoration(
+          ///IconData
           suffixIcon: Icon(IconData(0xe902, fontFamily: 'Icons'),
               color: Color(0xff35AA90), size: 10.0),
           ///内容边距

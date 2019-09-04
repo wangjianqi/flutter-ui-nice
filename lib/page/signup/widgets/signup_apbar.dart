@@ -25,6 +25,7 @@ class SignupApbar extends StatelessWidget implements PreferredSizeWidget {
           alignment: Alignment(-0.5, 4),
           ///
           child: SignUpArrowButton(
+            ///mayBe
             onTap: () => Navigator.maybePop(context),
             icon: IconData(
               arrow_left,
@@ -44,6 +45,7 @@ class SignupApbar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
+  ///默认值
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }

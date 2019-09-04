@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'dart:math';
 
 class SizeUtil {
+  ///设计图尺寸
   static const _DESIGN_WIDTH = 750;
   static const _DESIGN_HEIGHT = 1334;
 
@@ -23,6 +24,7 @@ class SizeUtil {
     return _logicSize.height;
   }
 
+  ///设置size
   static set size(size) {
     _logicSize = size;
   }

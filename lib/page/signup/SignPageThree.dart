@@ -50,6 +50,7 @@ class _SignPageThreeState extends State<SignPageThree> {
                       margin: EdgeInsets.only(right: 8.0),
                       child: Row(
                         children: <Widget>[
+                          ///计算
                           Container(
                             height: _media.height / 1.7,
                             width: _media.width / 1.25,

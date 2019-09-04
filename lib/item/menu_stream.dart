@@ -62,6 +62,7 @@ const _IMAGE_PATHS = [
 class MenuController {
   final controller = StreamController<List<Menu>>();
 
+  ///获取流
   Stream<List<Menu>> get menuItems => controller.stream;
 
   MenuController({List<Menu> menus}) {

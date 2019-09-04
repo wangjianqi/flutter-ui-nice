@@ -66,6 +66,7 @@ class _SignPageEightState extends State<SignPageEight> {
     );
   }
 
+  ///背景图
   Container buildBackgroundImage() {
     return Container(
       width: double.infinity,

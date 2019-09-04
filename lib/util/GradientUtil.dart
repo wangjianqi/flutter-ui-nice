@@ -11,6 +11,7 @@ class GradientUtil {
           {begin = AlignmentDirectional.centerStart,
           end = AlignmentDirectional.centerEnd,
           opacity = 1.0}) =>
+  ///渐变色
       LinearGradient(
         colors: [
           left.withOpacity(opacity),

@@ -34,6 +34,7 @@ class _SignPageSixState extends State<SignPageSix>
 
     _controller1.forward();
 
+    ///广播
     isCreating = new StreamController.broadcast();
   }
 

@@ -26,6 +26,7 @@ const LinearGradient SIGNUP_SIX_FACEBOOK_BG = LinearGradient(
   begin: FractionalOffset.bottomLeft,
   end: FractionalOffset.topRight,
   // Add one stop for each color. Stops should increase from 0 to 1
+  ///设置范围
   stops: [0.1, 0.3],
   colors: [
     Color(0xffe0c3fc),

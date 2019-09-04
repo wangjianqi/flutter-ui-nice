@@ -22,10 +22,11 @@ class HomePage extends StatelessWidget {
         pinned: true,
         backgroundColor: BLUE,
         expandedHeight: 150.0,
+
         ///
         flexibleSpace: FlexibleSpaceBar(
           title: Padding(
-            padding: EdgeInsets.only(top: 30.0),
+            padding: EdgeInsets.only(left: 30, top: 30.0),
             child: Row(
               children: <Widget>[
                 Image.asset(
@@ -43,6 +44,7 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+
           ///设置背景色
           background: Container(
             decoration: BoxDecoration(
@@ -60,7 +62,6 @@ class HomePage extends StatelessWidget {
     return InkWell(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20.0),
-        ///分割线
         margin: EdgeInsets.only(bottom: 1.0),
         decoration: BoxDecoration(gradient: GradientUtil.greenPurple()),
         constraints: BoxConstraints.expand(height: 60.0),
@@ -75,16 +76,9 @@ class HomePage extends StatelessWidget {
                     fontSize: TEXT_NORMAL_SIZE,
                     fontWeight: FontWeight.w700),
               ),
-            ]
-//            Divider(
-//              height: 1.0,
-//              color: Colors.white,
-//            )
-//          ],
-            ),
+            ]),
       ),
       onTap: () {
-//        Navigator.pop(context);
         Navigator.pushNamed(context, "$item");
       },
     );
@@ -106,6 +100,7 @@ class HomePage extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: GradientUtil.yellowGreen(),
         ),
+
         ///设置高度
         constraints: BoxConstraints.expand(height: 80.0),
         child: Center(
@@ -134,30 +129,34 @@ class HomePage extends StatelessWidget {
     ///modal
     showModalBottomSheet(
       context: context,
+
       ///Material
       builder: (context) => Material(
-            color: GREEN,
-            clipBehavior: Clip.antiAliasWithSaveLayer,
-            ///圆角
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(20.0),
-                topRight: Radius.circular(20.0),
+        color: GREEN,
+
+        ///Clip
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+
+        ///圆角
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(20.0),
+            topRight: Radius.circular(20.0),
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            _header(),
+            Expanded(
+              child: Container(
+                child: _menuList(menu),
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                _header(),
-                Expanded(
-                  child: Container(
-                    child: _menuList(menu),
-                  ),
-                ),
-                AboutMeTitle(),
-              ],
-            ),
-          ),
+            AboutMeTitle(),
+          ],
+        ),
+      ),
     );
   }
 
@@ -202,12 +201,14 @@ class HomePage extends StatelessWidget {
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
+            ///背景图片
             Image.asset(
               menu.image,
               fit: BoxFit.cover,
             ),
             Container(
               ///占满
+              ///渐变色
               constraints: BoxConstraints.expand(),
               decoration: BoxDecoration(gradient: _itemGradient(index)),
             ),
@@ -241,6 +242,7 @@ class HomePage extends StatelessWidget {
         ),
       );
 
+  ///Grid
   Widget _gridView(BuildContext context, List<Menu> list) => SliverGrid(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             mainAxisSpacing: 4.0,
@@ -255,18 +257,21 @@ class HomePage extends StatelessWidget {
 
   Widget _streamBuild(context) {
     var controller = MenuController();
+
     ///streamBuilder
     return StreamBuilder(
       builder: (context, shot) {
         return shot.hasData
             ? CustomScrollView(
-          //shot.data
+                //shot.data
                 slivers: <Widget>[_topBar(), _gridView(context, shot.data)],
               )
             : Center(
+                ///加载中
                 child: CircularProgressIndicator(),
               );
       },
+
       ///获取数据
       stream: controller.menuItems,
     );
@@ -284,7 +289,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ///设置size
+    ///适配
     SizeUtil.size = MediaQuery.of(context).size;
     return _showAndroid(context);
   }

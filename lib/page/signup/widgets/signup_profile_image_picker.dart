@@ -14,6 +14,7 @@ class ProfileImagePicker extends StatefulWidget {
 }
 
 class _ProfileImagePickerState extends State<ProfileImagePicker> {
+  ///图片文件
   File _image;
 
   ///获取图片
