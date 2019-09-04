@@ -30,11 +30,13 @@ class SizeUtil {
   }
 
   //@param w is the design w;
+  ///x轴
   static double getAxisX(double w) {
     return (w * width) / _DESIGN_WIDTH;
   }
 
 // the y direction
+  ///y轴
   static double getAxisY(double h) {
     return (h * height) / _DESIGN_HEIGHT;
   }

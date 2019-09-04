@@ -59,6 +59,7 @@ class MyApp extends StatelessWidget {
         SHOPPING_PAGES[17]: (context) => ShopPageEighteen(),
         SHOPPING_PAGES[18]: (context) => ShopPageNineteen(),
 
+        ///导航
         NAVIGATION_PAGES[0]: (context) => NavigationOneCoordinator(),
         //FIXME there are other pages to jump with 'page_str_const.dart',there should be make by manager
       },

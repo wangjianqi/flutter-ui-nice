@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_ui_nice/page/navigation/navigation1/animations/home_page_animator.dart';
 import 'package:flutter_ui_nice/page/navigation/navigation1/widgets/menu_buttons.dart';

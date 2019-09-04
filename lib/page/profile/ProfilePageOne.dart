@@ -196,6 +196,7 @@ class _ProfileState extends State<ProfilePageOne> {
         ),
         child: Column(
           children: <Widget>[
+            ///导航栏
             TopBar(
               leftIcon: ProfileImages.arrow_left,
               title: ProfileStrings.STRING_PROFILE,
